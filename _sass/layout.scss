@@ -2,11 +2,17 @@
 // The basic two column layout
 //
 
+code {
+    white-space : pre-wrap !important;
+    overflow-wrap: anywhere;
+}
+
 .site-wrap {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1280px; 
-    position: fixed;
-    height: 100%;
+    position: absolute;
+    // height: 100%;
 
 
     @include mq(sm) {
@@ -30,6 +36,8 @@
 .side-bar {
     z-index: 0;
     background-color: $sidebar-color;
+    width: 240px;
+    // height: 100%;
 
     @include mq(md) {
         flex-wrap: nowrap;
@@ -48,17 +56,18 @@
 
 .main {
     margin-left: 0px;
+    width: calc(100% - #{$nav-width});
     //@include mq(md) {
-    //    position: relative;
-    //    max-width: $content-width;
-    //    margin-left: $nav-width-md;
+        //    position: relative;
+        //    max-width: $content-width;
+        //    margin-left: $nav-width-md;
     //}
 
     //@include mq(lg) {
-    //    margin-left: calc(
-    //    (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
-    //    );
-    //    //margin-left: $nav-width;
+        //    margin-left: calc(
+        //    (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
+        //    );
+        //    //margin-left: $nav-width;
     //}
 }
 

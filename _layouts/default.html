@@ -30,7 +30,7 @@ layout: table_wrappers
     </symbol>
   </svg>
 
-  <div class="site-wrap">
+  <div id="site-wrap" class="site-wrap">
   <div class="side-bar">
     <div class="site-header">
       <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
@@ -45,12 +45,13 @@ layout: table_wrappers
       This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
     </footer>
   </div>
-  <div class="main">
+  <div id="main" class="main">
     <div id="main-header" class="main-header">
       {% if site.search_enabled != false %}
         <div class="search">
           <div class="search-input-wrap">
-            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
+            <input type="text" id="search-input" class="search-input"
+            tabindex="0" placeholder="Search {{ site.long_title }}" aria-label="Search {{ site.long_title }}" autocomplete="off">
             <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
           </div>
           <div id="search-results" class="search-results"></div>

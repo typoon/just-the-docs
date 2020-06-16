@@ -121,11 +121,16 @@ function searchLoaded(index, docs) {
   var currentSearchIndex = 0;
 
   function showSearch() {
-    document.documentElement.classList.add('search-active');
+    document.getElementById('main').classList.add('search-active');
+    //document.getElementById('main-header').classList.add('search-active');
+    //document.getElementById('main-header').classList.add('search-active');
+    //document.documentElement.classList.add('search-active');
   }
 
   function hideSearch() {
-    document.documentElement.classList.remove('search-active');
+    document.getElementById('main').classList.remove('search-active');
+    //document.getElementById('main-header').classList.remove('search-active');
+    //document.documentElement.classList.remove('search-active');
   }
 
   function update() {
